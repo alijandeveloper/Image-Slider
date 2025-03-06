@@ -32,3 +32,7 @@ function goToSlide(index) {
     currentIndex = index;
     updateSlides();
 }
+
+// Auto slide
+setInterval(nextSlide, 3000);
+updateSlides();
