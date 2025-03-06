@@ -17,3 +17,18 @@ function updateSlides() {
         dots[index].classList.toggle("active", index === currentIndex);
     });
 }
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlides();
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlides();
+}
+
+function goToSlide(index) {
+    currentIndex = index;
+    updateSlides();
+}
